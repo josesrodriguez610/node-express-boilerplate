@@ -2,9 +2,6 @@ import * as example1Service from "./example1.service.js";
 
 export const getExample1 = async (req, res, next) => {
   try {
-    // 💥 Intentionally cause an error
-    throw new Error("Intentional test error from getExample1");
-
     const data = await example1Service.fetchAll();
     res.json(data);
   } catch (err) {

@@ -8,14 +8,16 @@ Perfect for quickly bootstrapping new APIs or backend services.
 ## 🚀 Features
 
 - ⚙️ **Express.js** setup with modular routing (`/modules`)
-- 📦 **ESM imports** (`import/export` syntax)
-- 🌿 **dotenv** for environment variables
-- 🪵 **Winston logger** with timestamps & colorized output
-- 🔐 **API key and domain authentication middleware**
-- 🧱 Centralized **error handler** (`errorHandler.js`)
-- 🔄 Ready for **Prisma ORM** or any database
-- 🧩 Organized folder structure for scalability
-- 🧰 CORS, morgan, and other essential middlewares
+- 📦 **ES Module support** using `import` / `export` syntax
+- 🌿 **dotenv** for environment variable management
+- 🪵 **Winston logger** with timestamps and colorized output
+- 🔐 Built-in **API key** and **domain authentication** middleware
+- 🧱 Centralized **error handler** (`errorHandler.js`) with clean JSON responses
+- 🔄 Ready for **Prisma ORM** or any preferred database
+- 🧩 **Reusable Axios client factory** for external APIs (`createClient.js`)
+- 🧰 Includes **CORS**, **morgan**, and other essential middlewares
+- 🗂️ **Organized folder structure** designed for scalability and maintainability
+- 🚀 Perfect foundation for production-ready REST APIs or microservices
 
 ## 📂 Project Structure
 
@@ -49,6 +51,10 @@ src/
 │
 └── utils/
 └── logger.js # Winston logger configuration
+│ └── api/
+│ ├── createClient.js # Axios client factory
+│ ├── paywayClient.js # Example API client
+│ └── ...
 
 ## ⚙️ Installation
 
@@ -59,4 +65,5 @@ cd nodejs-boilerplate
 
 # Install dependencies
 npm install
+npm run dev
 ```
